@@ -1,0 +1,8 @@
+var str = "Mallikharjun";
+
+function reverseString(str) {
+  let reverserd = str.split("").reverse().join("");
+return str == reverserd
+}
+
+console.log(reverseString(str))

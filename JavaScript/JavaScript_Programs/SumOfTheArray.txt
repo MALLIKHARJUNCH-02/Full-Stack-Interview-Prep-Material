@@ -1,0 +1,12 @@
+const points = [1, 1, 1, 1, 1, 1];
+
+//  Reduce is JavaScript Method
+//  sum -> sum is the accumulator, which holds the running total
+//  num -> num is the current element from the array.
+//  The callback adds the current element num to the accumulator sum.
+//  The initial value for the accumulator, which is 0 here.
+function max(arr) {
+    return arr.reduce((sum, num) => sum + num, 1);
+}
+
+console.log(max(points))
