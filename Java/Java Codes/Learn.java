@@ -1,24 +1,19 @@
 import java.util.*;
 
 public class Learn {
+
+    public static int fact(int number) {
+        if ((number == 0) || (number == 1)) {
+            return 1;
+        }
+        return number * fact(number - 1);
+    }
+
     public static void main(String args[]) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter the Rows : ");
+        System.out.println("Enter the Number : ");
         int n = input.nextInt();
-        // System.out.println("Enter the Column : ");
-        // int m = input.nextInt();
-        int number = 1;
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= i; j++) {
-                if((i+j)%2==0){
-                    System.out.print("1 ");
-                }else{
-                    System.out.print("0 ");
-                }
-               
-            }
-            System.out.println();
-        }
+        System.out.println("The Factorial Of Number "+n+" is "+fact(n));
 
         input.close();
     }
