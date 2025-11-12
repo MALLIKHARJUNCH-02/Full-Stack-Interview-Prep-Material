@@ -1,0 +1,124 @@
+import java.util.Arrays;
+
+class GfG {
+    
+    // function to reverse an array
+    static void reverseArray(int[] arr) {
+        
+        // Initialize left to the beginning
+        // and right to the end
+        int left = 0, right = arr.length - 1;
+
+        // Iterate till left is less than right
+        while (left < right) {
+            
+            // Swap the elements at left
+            // and right position
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+
+            // Increment the left pointer
+            left++;
+
+            // Decrement the right pointer
+            right--;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = { 1, 4, 3, 2, 6, 5 };
+
+        reverseArray(arr);
+
+        for (int i = 0; i < arr.length; i++) 
+            System.out.print(arr[i] + " ");
+    }
+}
+
+========================================================================================================
+
+import java.util.Arrays;
+
+class GfG {
+    
+    static void reverseArray(int[] arr) {
+        int n = arr.length;
+        
+        // Temporary array to store elements
+        // in reversed order
+        int[] temp = new int[n];
+  
+        // Copy elements from original array
+        // to temp in reverse order
+        for (int i = 0; i < n; i++)
+            temp[i] = arr[n - i - 1];
+  
+        // Copy elements back to original array
+        for (int i = 0; i < n; i++)
+            arr[i] = temp[i];
+    }
+
+    public static void main(String[] args) {
+        int[] arr = { 1, 4, 3, 2, 6, 5 };
+
+        reverseArray(arr);
+  
+        for (int i = 0; i < arr.length; i++) 
+            System.out.print(arr[i] + " ");
+    }
+}
+
+===========================================================================================================
+
+import java.util.Arrays;
+
+class GfG {
+    
+    static void reverseArray(int[] arr) {
+        int n = arr.length;
+        
+        // Iterate over the first half 
+        // and for every index i, swap
+        // arr[i] with arr[n - i - 1]
+        for (int i = 0; i < n / 2; i++) {
+            int temp = arr[i];
+            arr[i] = arr[n - i - 1];
+            arr[n - i - 1] = temp;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = { 1, 4, 3, 2, 6, 5 };
+
+        reverseArray(arr);
+  
+        for (int i = 0; i < arr.length; i++) 
+            System.out.print(arr[i] + " ");
+    }
+}
+
+========================================================================================================
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+class GfG {
+    
+    // function to reverse an array
+    static void reverseArray(List<Integer> arr) {
+        Collections.reverse(arr);
+    }
+
+    public static void main(String[] args) {
+        List<Integer> arr = 
+          new ArrayList<>(Arrays.asList(1, 4, 3, 2, 6, 5));
+
+        reverseArray(arr);
+  
+        for (int i = 0; i < arr.size(); i++) 
+            System.out.print(arr.get(i) + " ");
+    }
+}
